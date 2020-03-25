@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name = "NoActionBar" parent = "Theme.AppCompat.Light.NoActionBar">
+        <item name = "android:windowNoTitle">true</item>
+    </style>
+
+    <style name = "ActionBar" parent = "Theme.AppCompat.Light" >
+        <item name="actionBarStyle">@style/MyActionBar</item>
+
+    </style>
+
+    <style name="MyActionBar" parent = "Theme.AppCompat.Light.DarkActionBar" >
+        <item name="background">@drawable/tab</item>
+    </style>
+
+    <style name ="button_borderless" parent="Widget.AppCompat.Button.Borderless">
+
+
+    </style>
+
+    <style name="AppThemeBase" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">#FFFFFF</item>
+        <item name="colorControlHighlight">#FFFFFF</item>
+        <item name = "android:windowActionBar">false</item>
+        <item name = "android:windowNoTitle">true</item>
+        <item name="android:label">false</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#868686</item>
+        <item name="colorControlActivated">#FFC200</item>
+    </style>
+
+</resources>

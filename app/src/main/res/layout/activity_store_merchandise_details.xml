@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".store.StoreMerchandiseDetailsActivity"
+    android:background="@drawable/background_4activity"
+    >
+
+    <ImageView
+        android:id="@+id/iv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintStart_toStartOf="parent"
+        tools:layout_constraintTop_toTopOf="parent"
+        tools:layout_marginLeft="0dp"
+        tools:layout_marginTop="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+
+        >
+
+        <RatingBar
+            android:id="@+id/store_ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:theme="@style/RatingBar" />
+
+        <TextView
+            android:id="@+id/product_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/store_ratingBar"
+            app:layout_constraintTop_toTopOf="@id/store_ratingBar" />
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/sv_productDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+            <LinearLayout
+                android:id="@+id/linear_product_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#660000"
+                android:onClick="onDetailClick"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/product_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="商品詳情"
+                    android:textColor="#FFE356"
+                    android:textSize="18sp"
+
+                    />
+
+            </LinearLayout>
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandable_layout_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:el_duration="200"
+                app:el_expanded="true"
+
+                app:el_parallax="0.5">
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="10dp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                 />
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_commet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="#660000"
+                android:onClick="onCommentClick"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/product_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="評價"
+                    android:textColor="#FFE356"
+                    android:textSize="18sp"
+
+                    />
+            </LinearLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandable_layout_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:el_duration="200"
+                app:el_expanded="false"
+
+                app:el_parallax="0.5">
+
+                <ListView
+                    android:id="@+id/listView_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    />
+            </net.cachapa.expandablelayout.ExpandableLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_text"
+                android:onClick="onAddToCartClicked"
+                android:text="加入購物車"
+                android:theme="@style/button_borderless"
+                 />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

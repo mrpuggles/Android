@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.da105_g4_v0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_wine_v1n"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_wine_v1n"
+        android:supportsRtl="true"
+        android:theme="@style/NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".cart.VisaCard"
+
+            ></activity>
+        <activity android:name=".bid.AuctionDetailsActivity" android:theme="@style/ActionBar" />
+        <activity
+            android:name=".order.MemberOrderCompleteDetailsActivity"
+            android:theme="@style/ActionBar" />
+        <activity android:name=".vendor.VendorSignedInMember"  />
+        <activity android:name=".vendor.VendorScan"  />
+        <activity android:name=".MainVendorActivity" />
+        <activity android:name=".course.CourseSignInActivity"  />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA7TAoCz7PQhA0qGBXW8M3kmw1QLNIeT2I" />
+
+        <activity android:name=".vendor.VendorLoginActivity" />
+        <activity android:name=".course.CourseMapActivity"  />
+        <activity
+            android:name=".cart.ShoppingCartActivity"
+            android:theme="@style/ActionBar"  />
+        <activity
+            android:name=".course.CourseDetailsActivity"
+            android:theme="@style/ActionBar"  />
+        <activity
+            android:name=".store.StoreMerchandiseDetailsActivity"
+            android:theme="@style/ActionBar" />
+        <activity android:name=".friendlist.MemberFriendList" />
+        <activity android:name=".course.MemberCourseDetailsActivity" />
+        <activity android:name=".bid.MemberBidDetailsActivity" />
+        <activity android:name=".order.MemberOrderActivity" />
+        <activity android:name=".member.MemberInfoActivity"  />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".member.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

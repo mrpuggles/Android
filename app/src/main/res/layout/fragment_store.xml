@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_store"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.StoreFragment"
+
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+            android:id="@+id/store_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:menu="@menu/tb_store" />
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:el_duration="200"
+                app:el_expanded="false"
+                app:el_parallax="0.5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/spinner"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_store_search"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_filled_search" />
+
+                <EditText
+                    android:id="@+id/tv_merch_search"
+                    android:layout_width="340dp"
+                    android:layout_height="40dp"
+                    android:ems="18"
+                    android:hint="搜尋"
+                    android:inputType="textPersonName"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_store_search"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="年份"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_store_search" />
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/sp_filter_year"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_power"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textSize="14.5sp"
+
+
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_divider_color="#FF0000"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+
+                    app:spinner_popup_animation="fade"
+                    app:spinner_popup_background="#DDDDDD"
+                    app:spinner_popup_elevation="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_year" />
+
+                <TextView
+                    android:id="@+id/tv_varietals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="葡萄種類"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sp_filter_year" />
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/sp_filter_varietals"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/spinner_power"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textSize="14.5sp"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_divider_color="#FF0000"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_popup_animation="fade"
+                    app:spinner_popup_background="#DDDDDD"
+                    app:spinner_popup_elevation="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_varietals" />
+
+
+                <TextView
+                    android:id="@+id/tv_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="國家"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sp_filter_varietals" />
+
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/sp_filter_regions"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_power"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textSize="14.5sp"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_divider_color="#FF0000"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_popup_animation="fade"
+                    app:spinner_popup_background="#DDDDDD"
+                    app:spinner_popup_elevation="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_country" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+
+
+</FrameLayout>

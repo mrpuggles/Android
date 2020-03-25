@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".friendlist.MemberFriendList">
+    <com.skydoves.powerspinner.PowerSpinnerView
+        android:id="@+id/pwsp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#68FFCD"
+        android:gravity="center"
+        android:hint="Question 1"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="14.5sp"
+        app:spinner_arrow_gravity="end"
+        app:spinner_arrow_padding="8dp"
+        app:spinner_divider_color="#FF0000"
+        app:spinner_divider_show="true"
+        app:spinner_divider_size="0.4dp"
+
+        app:spinner_popup_animation="dropdown"
+        app:spinner_popup_background="#C5FF8B"
+        app:spinner_popup_elevation="14dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

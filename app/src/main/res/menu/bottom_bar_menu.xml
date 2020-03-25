@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/selector_home"
+        android:title="home"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/store"
+        android:icon="@drawable/selector_store"
+        android:title="store"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/course"
+        android:icon="@drawable/selector_course"
+        android:title="course"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/member"
+        android:icon="@drawable/selector_member"
+        android:title="member"
+        app:showAsAction="ifRoom"
+        />
+</menu>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainVendorActivity"
+    android:background="@drawable/background_4activity"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_vendor_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_vendor"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="448dp"
+        app:civ_border_color="#000000"
+        app:civ_border_width="0.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="17dp"
+        android:gravity="center"
+        android:text="QR"
+        android:background="@drawable/selector_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/logOut_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/selector_text"
+        android:gravity="center"
+        android:onClick="onLogoutClick"
+        android:text="Log Out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnScan" />
+
+    <TextView
+        android:id="@+id/tv_vendor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginBottom="100dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profile_image_vendor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

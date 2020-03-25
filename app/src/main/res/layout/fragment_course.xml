@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="590dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.CourseFragment"
+
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+    android:id="@+id/tb_course"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tab"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="?attr/actionBarTheme"
+
+    app:menu="@menu/course_menu"
+
+    />
+
+</FrameLayout>

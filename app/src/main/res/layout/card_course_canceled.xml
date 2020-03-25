@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_border"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_courseCanceled"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_courseCanceledC_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:lines="2"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/iv_courseCanceled"
+            app:layout_constraintTop_toTopOf="@id/iv_courseCanceled" />
+
+
+        <TextView
+            android:id="@+id/tv_courseStartTimeC_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tv_courseCanceledC_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_courseCanceledC_title" />
+
+
+        <TextView
+            android:id="@+id/tv_courseEndTimeC_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tv_courseStartTimeC_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_courseStartTimeC_title" />
+
+
+        <TextView
+            android:id="@+id/tv_coursePriceC_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tv_courseEndTimeC_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_courseEndTimeC_title" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bid.AuctionDetailsActivity"
+    android:background="@drawable/background_4activity"
+    android:orientation="vertical"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv_auctionDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/auc_pics"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+            <com.hanks.htextview.scale.ScaleTextView
+                android:id="@+id/auc_remainingTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/linear_exlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#660000"
+                android:onClick="elClick"
+                >
+
+                <TextView
+                    android:id="@+id/auc_details_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="競標商品詳情"
+                    android:textColor="#FFE356"/>
+            </LinearLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:el_duration="200"
+                app:el_expanded="true"
+
+                app:el_parallax="0.5">
+
+                <ScrollView
+                    android:id="@+id/sv_auction_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="#EFEFEF">
+
+                    <TextView
+                        android:id="@+id/auc_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_view"
+                        android:scrollbars="vertical"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </ScrollView>
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <TextView
+                android:id="@+id/auc_currentPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="24sp"
+
+
+                />
+
+            <TextView
+                android:id="@+id/auc_currentPriceAnime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+
+                />
+        <LinearLayout
+            android:id="@+id/linear_exlayout_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#660000"
+            android:onClick="elClick_msg"
+            >
+            <TextView
+                android:id="@+id/auc_msg_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="競標區"
+                android:textColor="#FFE356"/>
+        </LinearLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandable_layout_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:el_duration="200"
+                app:el_expanded="false"
+                app:el_parallax="0.5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <ScrollView
+                        android:id="@+id/sv_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@drawable/chat_view"
+                        android:nestedScrollingEnabled="true"
+                        android:scrollbars="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linear_chat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            tools:layout_editor_absoluteY="1dp"></LinearLayout>
+
+
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_user_bid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_auc_bid"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/selector_text"
+                            android:gravity="center"
+                            android:text="出價"
+                            android:theme="@style/button_borderless" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".member.MemberInfoActivity"
+    android:background="#E5E5E5"
+    >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#A88264"
+        >
+
+        <Button
+            android:id="@+id/btn_member_gallery"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="360dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/ic_filled_gallery"
+
+            style="@style/button_borderless" />
+
+        <Button
+            android:id="@+id/btn_member_camera"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="360dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/ic_filled_camera"
+            style="@style/button_borderless"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/pic_pepe"
+            app:civ_border_color="#000000"
+            app:civ_border_width="2dp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_member_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="403dp"
+        android:text="會員名稱"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_member_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:onClick="onMemberNameClicked"
+        android:text="_______"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_member_name_title"
+        app:layout_constraintStart_toEndOf="@id/guideline5" />
+
+    <TextView
+        android:id="@+id/tv_member_id_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="30dp"
+        android:text="帳號"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_member_name_title" />
+
+    <TextView
+        android:id="@+id/tv_member_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:onClick="onMemberNameClicked"
+        android:text="_______"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_member_id_title"
+        app:layout_constraintStart_toEndOf="@id/guideline5" />
+
+    <TextView
+        android:id="@+id/tv_member_psw_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="30dp"
+        android:text="密碼"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_member_id_title" />
+
+    <TextView
+        android:id="@+id/tv_member_psw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:onClick="onMemberNameClicked"
+        android:text="_______"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_member_psw_title"
+        app:layout_constraintStart_toEndOf="@id/guideline5" />
+
+    <TextView
+        android:id="@+id/tv_member_birth_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="30dp"
+        android:text="生日"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_member_psw_title" />
+
+    <TextView
+        android:id="@+id/tv_member_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:onClick="onMemberNameClicked"
+        android:text="_______"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_member_birth_title"
+        app:layout_constraintStart_toEndOf="@id/guideline5" />
+
+    <TextView
+        android:id="@+id/tv_member_phone_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="30dp"
+        android:text="電話"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_member_birth_title" />
+
+    <TextView
+        android:id="@+id/tv_member_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:onClick="onMemberNameClicked"
+        android:text="_______"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_member_phone_title"
+        app:layout_constraintStart_toEndOf="@id/guideline5" />
+
+    <TextView
+        android:id="@+id/tv_member_email_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="30dp"
+        android:text="Email"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_member_phone_title" />
+
+    <TextView
+        android:id="@+id/tv_member_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:onClick="onMemberNameClicked"
+        android:text="_______"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_member_email_title"
+        app:layout_constraintStart_toEndOf="@id/guideline5" />
+
+    <Button
+        android:id="@+id/btn_member_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/shape_button"
+        android:onClick="onMemberUpdateClicked"
+        android:text="確認修改"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/button_borderless"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="75dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

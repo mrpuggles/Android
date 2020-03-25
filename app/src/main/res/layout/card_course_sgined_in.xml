@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_course_member_signedIn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="15dp"
+    android:background="@drawable/shape_border"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_border"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_courseSignedIn"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_courseEnrolledS_title"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constrainedWidth="true"
+            android:singleLine="false"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/iv_courseSignedIn"
+            app:layout_constraintTop_toTopOf="@id/iv_courseSignedIn" />
+
+
+        <TextView
+            android:id="@+id/tv_courseStartTimeS_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tv_courseEnrolledS_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_courseEnrolledS_title" />
+
+
+        <TextView
+            android:id="@+id/tv_courseEndTimeS_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tv_courseStartTimeS_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_courseStartTimeS_title" />
+
+
+        <TextView
+            android:id="@+id/tv_coursePriceS_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tv_courseEndTimeS_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_courseEndTimeS_title" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

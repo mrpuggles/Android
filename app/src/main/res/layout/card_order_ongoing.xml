@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_border"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_merchandise_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_orderNo_title_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="訂單編號: "
+            android:textColor="#000000"
+
+            app:layout_constraintStart_toEndOf="@id/iv_merchandise_order"
+            app:layout_constraintTop_toTopOf="@id/iv_merchandise_order" />
+
+        <TextView
+            android:id="@+id/tv_orderNo_order"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/tv_orderNo_title_order"
+            app:layout_constraintTop_toTopOf="@id/tv_orderNo_title_order" />
+
+
+        <TextView
+            android:id="@+id/tv_orderTime_title_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="購買時間: "
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tv_orderNo_title_order"
+            app:layout_constraintTop_toBottomOf="@id/tv_orderNo_title_order" />
+
+        <TextView
+            android:id="@+id/tv_orderTime_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/tv_orderTime_title_order"
+            app:layout_constraintTop_toTopOf="@id/tv_orderTime_title_order" />
+
+
+        <TextView
+            android:id="@+id/tv_orderTotal_title_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="總金額: "
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tv_orderTime_title_order"
+            app:layout_constraintTop_toBottomOf="@id/tv_orderTime_title_order" />
+
+        <TextView
+            android:id="@+id/tv_orderTotal_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/tv_orderTotal_title_order"
+            app:layout_constraintTop_toTopOf="@id/tv_orderTotal_title_order" />
+
+        <Button
+            android:id="@+id/btn_cancel_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector_text"
+            android:text="Cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

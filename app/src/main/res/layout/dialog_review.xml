@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_review"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dialog_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="評價" />
+
+    <EditText
+        android:id="@+id/et_dialog_review"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:ems="10"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:lineSpacingExtra="2sp"
+        android:overScrollMode="always"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false" />
+
+    <RatingBar
+        android:id="@+id/rb_review"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="false"
+        android:stepSize="1.0"
+        android:numStars="5"
+        android:clickable="true"
+        android:theme="@style/RatingBar"
+
+        />
+
+</LinearLayout>

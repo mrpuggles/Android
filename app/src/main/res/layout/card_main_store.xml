@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/shape_border"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/shape_border"
+
+        >
+
+        <RatingBar
+            android:id="@+id/store_ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/iv_merchandise"
+            app:layout_constraintTop_toBottomOf="@+id/tv_merchandise_price"
+            android:theme="@style/RatingBar"
+            />
+
+        <ImageView
+            android:id="@+id/iv_merchandise"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_name_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名稱: "
+            android:textColor="#000000"
+
+            app:layout_constraintStart_toEndOf="@id/iv_merchandise"
+            app:layout_constraintTop_toTopOf="@id/iv_merchandise" />
+
+        <TextView
+            android:id="@+id/tv_merchandise_name"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            app:layout_constrainedWidth="true"
+            android:singleLine="false"
+            android:lines="2"
+            app:layout_constraintStart_toEndOf="@id/tv_name_title"
+            app:layout_constraintTop_toTopOf="@id/tv_name_title" />
+
+
+        <TextView
+            android:id="@+id/tv_year_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="年份: "
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tv_name_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_title" />
+
+        <TextView
+            android:id="@+id/tv_merchandise_year"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/tv_year_title"
+            app:layout_constraintTop_toTopOf="@id/tv_year_title" />
+
+
+        <TextView
+            android:id="@+id/tv_currentPrice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="國家: "
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tv_year_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_year_title" />
+
+        <TextView
+            android:id="@+id/tv_auction_currentPrice"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/tv_currentPrice_title"
+            app:layout_constraintTop_toTopOf="@id/tv_currentPrice_title" />
+
+
+        <TextView
+            android:id="@+id/tv_varietal_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="葡萄種類: "
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tv_currentPrice_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_currentPrice_title" />
+
+        <TextView
+            android:id="@+id/tv_merchandise_varietal"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            app:layout_constrainedWidth="true"
+            android:singleLine="false"
+            android:lines="2"
+            app:layout_constraintStart_toEndOf="@id/tv_varietal_title"
+            app:layout_constraintTop_toTopOf="@id/tv_varietal_title" />
+
+
+        <TextView
+            android:id="@+id/tv_price_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="價錢: "
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/tv_varietal_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_varietal_title" />
+
+        <TextView
+            android:id="@+id/tv_merchandise_price"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/tv_price_title"
+            app:layout_constraintTop_toTopOf="@id/tv_price_title" />
+
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            style="?android:progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="80dp"
+            android:indeterminateTint="#0085FF"
+            app:layout_constraintStart_toStartOf="@id/iv_merchandise"
+            app:layout_constraintTop_toTopOf="@id/iv_merchandise" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

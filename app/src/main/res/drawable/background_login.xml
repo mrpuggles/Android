@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#23074d"
+
+                android:endColor="#cc5333"
+                android:angle="45"
+                android:gradientRadius="@dimen/cardview_default_elevation"
+                />
+        </shape>
+    </item>
+</selector>

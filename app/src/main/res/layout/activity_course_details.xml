@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".course.CourseDetailsActivity"
+    android:background="@drawable/background_4activity"
+
+    >
+
+
+    <ImageView
+        android:id="@+id/iv_course_detail"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        tools:layout_constraintStart_toStartOf="parent"
+        tools:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-83dp"
+        tools:layout_marginLeft="0dp"
+        tools:layout_marginTop="0dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/linear_course_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+
+                android:background="#660000"
+                android:onClick="onDetailClick"
+                >
+                <TextView
+                    android:id="@+id/product_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="課程詳情"
+                    android:textColor="#FFE356"
+                    android:textSize="18sp"
+
+                    />
+            </LinearLayout>
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandable_layout_course_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:el_duration="200"
+                app:el_expanded="true"
+
+                app:el_parallax="0.5">
+
+                <ScrollView
+                    android:id="@+id/sv_course_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_course_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:scrollbars="vertical"
+                        app:layout_constraintStart_toStartOf="@id/iv_course_detail"
+                        app:layout_constraintTop_toBottomOf="@id/iv_course_detail" />
+                </ScrollView>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tv_course_detail"
+                app:layout_constraintTop_toBottomOf="@id/tv_course_detail">
+
+                <fragment
+                    android:id="@+id/fmMap"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_navigate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/selector_text"
+                    android:onClick="onNaviClicked"
+                    android:text="Navigate"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_enroll"
+                    app:layout_constraintTop_toTopOf="@id/btn_enroll" />
+
+                <Button
+                    android:id="@+id/btn_enroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/selector_text"
+                    android:text="Enroll"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/frame" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
